@@ -1,82 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cricket Game</title>
-    <style>
-      body {
-        text-align: center;
-      }
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cricket Game</title>
+		<style>
+			body {
+				text-align: center;
+			}
 
-      button {
-        border: none;
-        margin: 10px;
-      }
+			button {
+				border: none;
+				margin: 10px;
+			}
 
-      img {
-        height: 120px;
-        width: 120px;
-        cursor: pointer;
-      }
+			img {
+				height: 120px;
+				width: 120px;
+				cursor: pointer;
+			}
 
-      .reset-btn {
-        padding: 20px 50px;
-        font-size: larger;
-        cursor: pointer;
-        border: 0.5px solid black;
-        background-color: transparent;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Cricket Game</h1>
+			.reset-btn {
+				padding: 20px 50px;
+				font-size: larger;
+				cursor: pointer;
+				border: 0.5px solid black;
+				background-color: transparent;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Cricket Game</h1>
 
-    <button
-      onclick="
+		<button
+			onclick="
       let computerChoice = computerChoiceMove();
       let resultMsg = getResult('Bat', computerChoice);
       showResult('Bat', computerChoice, resultMsg);
     "
-    >
-      <img src="image/bat.jpg" class="choice-img" alt="bat" />
-    </button>
+		>
+			<img src="image/bat.jpg" class="choice-img" alt="bat" />
+		</button>
 
-    <button
-      onclick="
+		<button
+			onclick="
       computerChoice = computerChoiceMove();
       resultMsg = getResult('Ball', computerChoice);
       showResult('Ball',computerChoice,resultMsg);
     "
-    >
-      <img src="image/download.jpg" class="choice-img" alt="ball" />
-    </button>
+		>
+			<img src="image/download.jpg" class="choice-img" alt="ball" />
+		</button>
 
-    <button
-      onclick="
+		<button
+			onclick="
       computerChoice = computerChoiceMove();
       resultMsg = getResult('Stump', computerChoice);
       showResult('Stump',computerChoice,resultMsg);
     "
-    >
-      <img src="image/stump.jpg" class="choice-imgg" alt="stump" />
-    </button>
+		>
+			<img src="image/stump.jpg" class="choice-imgg" alt="stump" />
+		</button>
 
-    <h3 id="your-move"></h3>
-    <h3 id="computer-move"></h3>
-    <h3 id="result"></h3>
-    <h3 id="score"></h3>
+		<h3 id="your-move"></h3>
+		<h3 id="computer-move"></h3>
+		<h3 id="result"></h3>
+		<h3 id="score"></h3>
 
-    <button
-      class="reset-btn"
-      onclick="
+		<button
+			class="reset-btn"
+			onclick="
       localStorage.clear()
       resetScore(); 
   "
-    >
-      Reset
-    </button>
+		>
+			Reset
+		</button>
 
-    <script src="script.js"></script>
-  </body>
+		<script src="script.js"></script>
+	</body>
 </html>
