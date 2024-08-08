@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rock Paper Scissors</title>
+		<link rel="stylesheet" href="rockpaperscissors.css" />
+	</head>
+	<body>
+		<p class="title">The Rock Paper Scissors Game:</p>
+
+		<!-- w/o icons  -->
+		<!-- <button onclick="playGame('Rock')">Rock</button>
+		<button onclick="playGame('Paper')">Paper</button>
+		<button onclick="playGame('Scissors')">Scissors</button> -->
+
+		<!-- with icons + using EventListners instead of onclick -->
+		<button class="movebtn js-rockBtn">
+			<img class="moveicon" src="images/rock-emoji.png" />
+		</button>
+		<button class="movebtn js-paperBtn">
+			<img class="moveicon" src="images/paper-emoji.png" />
+		</button>
+		<button class="movebtn js-scissorsBtn">
+			<img class="moveicon" src="images/scissors-emoji.png" />
+		</button>
+
+		<!-- adding css -->
+		<p class="js-move"></p>
+		<p class="js-result result"></p>
+		<p class="js-score score"></p>
+
+		<button class="reset-score-btn js-resetScoreBtn">Reset Score</button>
+
+		<!-- adding autoplay btn using async js  + adding EL -->
+		<button class="auto-play-btn js-autoPlayBtn">Auto Play</button>
+
+		<script src="rockpaperscissors.js"></script>
+	</body>
+</html>
